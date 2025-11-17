@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Isaiah Shannon"
+    meta name="description" content="CS2 for Newbz = learn Counter-Strike 2 with guides, map breakdowns, recoil control patterns, tips and tricks. Find groups and improve your CS2 skill.">
+    <title>Cs2forNewbz.com</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" type="text/css">
+    <style>
+        /* Make all images flexible */
+        img{
+            max-width:100%;
+            height:auto;
+        }
+
+        /* desktop section title styling */
+        #section1 h2 {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            width: 100%;
+        }
+
+        /* desktop images in a row */
+        .image-container {
+            display: flex;
+            gap: 10px;
+        }
+
+        .image-container img {
+            flex: 1;
+            max-width: 300px;
+        }
+
+        /* tablet media query */
+        @media screen and (max-width: 768px){
+            body{
+                padding: 15px;
+            }
+            nav ul{
+                display:flex;
+                flex-direction:column;
+                align-items:center;
+                gap: 10px;
+            }
+            
+            /* images stack in column on tablet */
+            .image-container {
+                flex-direction: column;
+            }
+            
+            .image-container img{
+                display:block;
+                width: 80%;
+                max-width: 400px;
+                margin:10px auto;
+            }
+        }
+        
+        /* mobile media query */
+        @media screen and (max-width: 480px){
+            body{
+                padding:10px;
+            }
+            h1{
+                font-size: 1.3rem;
+            }
+            h2{
+                font-size:1.1rem;
+            }
+            p{
+                font-size:0.9rem;
+            }
+            header img{
+                max-width: 100px;
+            }
+            nav ul li a{
+                font-size: 0.85rem;
+                padding: 8px;
+            }
+            
+            .image-container img{
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body onload="displayLastModified()">
+    <header>
+    <h1> Welcome to CS2 For Newbz</h1>
+    <img src = "Images/aks-crossed.png" alt="crossed ak-47s for logo">
+    <hr>
+<nav>
+<ul>
+    <li><a href="maps.html">Map Breakdowns</a></li>
+    <li><a href="#recoil-control-patterns">Recoil Control Patterns</a></li>
+    <li><a href="#utilities">Utilities </a></li>
+    <li><a href="tips.html">Tips and Tricks Open Forum </a></li>
+    <li><a href="LFG.html" class="pulse-link">Looking For Groups</a></li>
+</ul>
+</nav>
+</header>
+
+<main>
+    <p>This website is for new players or current players to learn the game and develop into one of the best.</p>
+
+    <p>If you are already experienced, then click the Find Player Now!</p>
+
+    <!-- Pulsing Find Players Button -->
+    <div style="text-align: center; margin: 30px 0;">
+        <a href="LFG.html" class="pulse-button" style="text-decoration: none;">Find Players Now!</a>
+    </div>
+
+    <article id = "article">
+        <h2>Article for announcements or updates</h2>
+        <p> Announcements and updates will be shown here!</p>
+        
+    </article>
+    <section id="section1">
+        <h2>Guns, Maps, and Utilities</h2>
+        <div class="image-container">
+            <img src = "Images/ak47.jpg" alt="Ak-47 assault rifle">
+            <img src ="Images/Dust-2.jpg" alt="screenshot of Dust 2">
+            <img src ="Images/smoke-grenade.jpg" alt="screenshot of a smoke grenade">
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <hr>
+    <p> If any issues or would like to contact me, Email is : Ishannon22@students.clayton.edu </p>
+    <p> Due by 11/16/25 11:59pm </p>
+    <div id="lastModified"></div>
+</footer>
+
+</body>
+</html>

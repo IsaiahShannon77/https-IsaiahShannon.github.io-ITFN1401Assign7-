@@ -1,0 +1,184 @@
+/* the background color is set to light gray, font family Roboto, its font is sans serif, and set the text to be black */
+body {
+    background-color: #f0f0f0;
+    font-family: 'Roboto', sans-serif;
+    color: #000;
+}
+
+/* set the header title to orange, centered it, set font size, added a border to seperate title, and image for logo, with padding for spacing*/
+h1 {
+    color: orange;
+    text-align: center;
+    font-size: 2.5em;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 10px;
+}
+/* display block allows me to the center image underneath the title with the code margin set to 0 auto*/
+header img {
+    display: block;
+    margin: 0 auto;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+/* border creates a soild black outline on the images, border radius set to 0 makes the outline square with margin spacing*/
+section#section1 img {
+    border: 5px solid black;
+    border-radius: 0;
+    margin: 10px;
+}
+section1 h2{
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    width: 100%;
+}
+.image-container{
+    display: flex;
+    gap: 10px;
+}
+.image-container img{
+    flex: 1;
+    max-width: 300px;
+}
+
+/* padding creates spacing between the content and the element, max width prevents text from stretching, then set the margin to 0 to center horizontally*/
+main {
+    padding: 20px;
+    max-width: 960px;
+    margin: 0 auto;
+}
+/*removed the bullet points and centered the sections horizontally*/
+nav ul {
+    list-style-type: none;
+    text-align: center;
+    padding: 0;
+}
+/* allows the sections to be on the same line with spacing*/
+nav li {
+    display: inline-block;
+    margin: 0 15px;
+}
+/*removes underline that looked like a default hyperlink, made it bold and kept it blue*/
+a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #ddd;
+    margin-top: 20px;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* pulse animation for the Looking For Groups nav link */
+.pulse-link {
+    animation: pulse 2s ease-in-out infinite;
+    display: inline-block;
+}
+
+/* pulsing button class for LFG page Find Players button */
+.pulse-button {
+    animation: pulse 2s ease-in-out infinite;
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    border: none;
+    cursor: pointer;
+    margin: 20px 0;
+}
+
+.pulse-button:hover {
+    background-color: #45a049;
+    box-shadow: 0 0 20px rgba(76, 175, 80, 0.6);
+}
+
+/* Styling for last modified date in footer */
+#lastModified {
+    margin-top: 10px;
+    font-style: italic;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+    
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    /* images stack in column on tablet */
+    .image-container {
+        flex-direction: column;
+    }
+    
+    .image-container img {
+        display: block;
+        width: 80%;
+        max-width: 400px;
+        margin: 10px auto;
+    }
+}
+@media screen and (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    
+    h1 {
+        font-size: 1.3rem;
+    }
+    
+    h2 {
+        font-size: 1.1rem;
+    }
+    
+    p {
+        font-size: 0.9rem;
+    }
+    
+    header img {
+        max-width: 100px;
+    }
+    
+    nav ul li a {
+        font-size: 0.85rem;
+        padding: 8px;
+    }
+    
+    .image-container img {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    /* Make pulse button responsive on mobile */
+    .pulse-button {
+        padding: 12px 20px;
+        font-size: 1rem;
+    }
+}

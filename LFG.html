@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Isaiah Shannon">
+    <meta name="description" content="Looking for group page forum for new players or experienced to look for other players to play with in competitive or casual games.">
+    <title>Looking for Group - Cs2forNewbz</title>
+    <link rel="stylesheet" href="LFGstyles.css">
+    <!-- Link JavaScript file at the top for onload event -->
+    <script src="script.js"></script>
+</head>
+<body onload="displayLastModified()">
+    <div class="container">
+        <header>
+            <h1>🎮 CS2 Looking for Group</h1>
+            <p class="subtitle">Find teammates for Counter-Strike 2!</p>
+        </header>
+
+        <nav>
+            <a href="index.html">← Back to Home</a>
+        </nav>
+
+        <div class="form-container">
+            <form id="lfgForm">
+                <fieldset>
+                    <legend>Account Login</legend>
+                    
+                    <div class="form-group">
+                        <label for="username">Username <span class="required">*</span></label>
+                        <input type="text" id="username" name="username" required placeholder="Enter your username">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Password <span class="required">*</span></label>
+                        <input type="password" id="password" name="password" required placeholder="Enter your password">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="displayName">Display Name (Forum) <span class="required">*</span></label>
+                        <input type="text" id="displayName" name="displayName" required placeholder="Name to show in the forum">
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Group Preferences</legend>
+                    
+                    <div class="form-group">
+                        <label>Play Mode <span class="required">*</span></label>
+                        <div class="radio-group">
+                            <div class="radio-option">
+                                <input type="radio" id="casual" name="playMode" value="casual" required>
+                                <label for="casual">Casual - For fun and practice</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="competitive" name="playMode" value="competitive">
+                                <label for="competitive">Competitive - Ranked matches</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="teamSize">Looking for Players <span class="required">*</span></label>
+                        <select id="teamSize" name="teamSize" required>
+                            <option value="">-- Select team size --</option>
+                            <option value="solo">Solo LFG (Looking for full team)</option>
+                            <option value="1">Need 1 player</option>
+                            <option value="2">Need 2 players</option>
+                            <option value="3">Need 3 players</option>
+                            <option value="4">Need 4 players</option>
+                        </select>
+                    </div>
+                </fieldset>
+
+                <button type="submit" class="submit-button">Submit</button>
+            </form>
+        </div>
+
+        <footer>
+            <p>&copy; Looking for Group Portal</p>
+            <p>If any issues, contact Owner Ishannon22@student.clayton.edu</p>
+            <p><strong>Assignment Due Date: 11/2/25</strong></p>
+            <div id="lastModified"></div>
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById('lfgForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const displayName = document.getElementById('displayName').value;
+            const playMode = document.querySelector('input[name="playMode"]:checked')?.value;
+            const teamSize = document.getElementById('teamSize').value;
+            
+            // Create a summary of the user's information
+            let message = `Welcome to the CS2 LFG Forum, ${displayName}!\n\n`;
+            message += `Play Mode: ${playMode.charAt(0).toUpperCase() + playMode.slice(1)}\n`;
+            message += `Team Size: ${teamSize === 'solo' ? 'Solo LFG (Looking for full team)' : 'Need ' + teamSize + ' player(s)'}\n`;
+            message += `\nYou will now be redirected to the forum...`;
+            
+            alert(message);
+        });
+    </script>
+</body>
+</html>
